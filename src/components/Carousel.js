@@ -56,9 +56,10 @@ const properties = {
   indicators: true,
   arrows: true,
 };
-const Slideshow = () => { 
+
+const Slideshow = () => {
   return (
-    <div className="slide-container mx-auto sm:w-1/2 md:mx-auto w-3/4 ">
+    <div className="slide-container mx-auto sm:w-1/2 md:mx-auto w-3/4 mb-4">
       <Slide {...properties}>
         {slideImages.map((slideImage, index) => (
           <div key={index}>
@@ -66,10 +67,11 @@ const Slideshow = () => {
               className="mx-auto"
               style={{ ...divStyle }}
             >
-              <img 
-              src={slideImage.url}
-              className="object-fill w-full h-auto"
-              style={{ ...imgStyle }}
+              <img
+                src={slideImage.url}
+                className="object-fill w-full h-auto"
+                style={{ ...imgStyle }}
+                alt={slideImage.caption}
               />
               {/* <span style={spanStyle}></span> */}
             </div>
