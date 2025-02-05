@@ -3,11 +3,13 @@ import { Carousel } from "flowbite-react";
 import { useState, useEffect } from "react";
 import Slideshow from "./Carousel";
 import { useRef } from "react";
+
 function Home() {
   const [screenSize, getDimension] = useState({
     dynamicWidth: window.innerWidth,
     dynamicHeight: window.innerHeight,
   });
+
   const [hover, setHover] = useState(true);
   const setDimension = () => {
     getDimension({
@@ -23,16 +25,17 @@ function Home() {
       window.removeEventListener("resize", setDimension);
     };
   }, [screenSize]);
+
   return (
     <div>
       <div>
-        <h1
+        {/* <h1
           onMouseEnter={() => setHover(false)}
           onMouseLeave={() => setHover(true)}
           className="-mt-20 max-[1300px]:mt-0 text-3xl  font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl"
         >
           {hover ? "Swarajya" : "स्वराज्य"}
-        </h1>
+        </h1> */}
         <img
           style={{
             boxShadow:
@@ -45,6 +48,7 @@ function Home() {
           alt="Logo"
           className="w-20 h-20 mx-auto my-12"
         />
+
         <div>
           <div>
             <div
@@ -60,7 +64,7 @@ function Home() {
               ) : (
                 <span style={{ fontWeight: "700", fontSize: "26px" }}>
                   स्वराज्य मराठी साहित्य संघ हा वेल्लूर इन्स्टिट्यूट ऑफ
-                  टेक्नॉलॉजी चेन्नई येथील सांस्कृतिक क्लब आहे.
+                  टेक्नॉलॉजी, चेन्नई येथील सांस्कृतिक क्लब आहे.
                 </span>
               )}
             </div>
