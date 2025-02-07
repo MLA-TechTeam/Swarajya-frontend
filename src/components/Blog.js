@@ -153,8 +153,8 @@ function BlogContent({ blog }) {
             {/* paragraph content */}
             <p
               // text- lg(large), xl, 2xl, 3xl
-              // className="text-lg text-gray-300 mt-4 text-left text-justify"
-              className="text-xl text-gray-300 mt-4 text-left text-justify"
+              // className="text-lg text-gray-300 mt-4 text-justify"
+              className="text-xl text-gray-300 mt-4 text-justify"
               style={{ textIndent: paragraph_indent }}
             >
               {item.para}
@@ -220,12 +220,12 @@ function BlogContent({ blog }) {
         {blog.aboutAuthor && (
           <div className="sm:text-right">
             <h2 className="text-lg font-semibold text-gray-200">About the Author</h2>
-            <p className="text-gray-400 mt-2">{blog.aboutAuthor.split('\n')[0]}</p>
-            <p className="text-gray-400">{blog.aboutAuthor.split('\n')[1]}</p>
-            <p className="text-gray-400">{blog.aboutAuthor.split('\n')[2]}</p>
-            <p className="text-gray-400">{blog.aboutAuthor.split('\n')[3]}</p>
-            <p className="text-gray-400">{blog.aboutAuthor.split('\n')[4]}</p>
-            <p className="text-gray-400">{blog.aboutAuthor.split('\n')[5]}</p>
+            <p className="text-gray-400 mt-2">{blog.aboutAuthor.split('<br>')[0]}</p>
+            <p className="text-gray-400">{blog.aboutAuthor.split('<br>')[1]}</p>
+            <p className="text-gray-400">{blog.aboutAuthor.split('<br>')[2]}</p>
+            <p className="text-gray-400">{blog.aboutAuthor.split('<br>')[3]}</p>
+            <p className="text-gray-400">{blog.aboutAuthor.split('<br>')[4]}</p>
+            <p className="text-gray-400">{blog.aboutAuthor.split('<br>')[5]}</p>
           </div>
         )}
       </footer>
