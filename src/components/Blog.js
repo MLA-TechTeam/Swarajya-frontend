@@ -109,6 +109,14 @@ function BlogContent({ blog }) {
   // return text;
   // }
 
+  const formatTextWithLineBreaks = (text) => 
+    text.split("\n").map((line, index) => (
+      <span key={index}>
+        {line}
+        <br />
+      </span>
+    ));
+  
 
   return (
     <article className="mx-auto w-full max-w-3xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
@@ -157,8 +165,8 @@ function BlogContent({ blog }) {
               className="text-xl text-gray-300 mt-4 text-justify"
               style={{ textIndent: paragraph_indent }}
             >
-              {item.para}
-              {/* {formatTextWithLineBreaks(item.para)} */}
+              {/* {item.para} */}
+              {formatTextWithLineBreaks(item.para)}
             </p>
           </div>
         ))}
