@@ -1,8 +1,10 @@
 import React from "react";
 import { Carousel } from "flowbite-react";
 import { useState, useEffect } from "react";
-import Slideshow from "./Carousel";
 import { useRef } from "react";
+
+import Slideshow from "./Carousel";
+import Flipbook from "./Flipbook"; // Import Flipbook
 
 function Home() {
   const [screenSize, getDimension] = useState({
@@ -70,6 +72,9 @@ function Home() {
             </div>
           </div>
         </div>
+        
+        {/* FlipBook */}
+        <Flipbook />
 
         <Slideshow />
       </div>

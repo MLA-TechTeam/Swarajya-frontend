@@ -14,6 +14,10 @@ import Blogs from "./components/Blogs";
 import Gallery2 from "./components/Gallery";
 import UpcomingEvents from "./components/Events";
 
+// For flipbook:
+import "react-pdf/dist/esm/Page/TextLayer.css";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+
 // Test:
 import Home2 from "./components/Home2";
 
